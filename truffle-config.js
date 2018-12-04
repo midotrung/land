@@ -1,15 +1,16 @@
 require('babel-register')
 require('babel-polyfill')
 
-const HDWalletProvider = require('truffle-hdwallet-provider')
+// const HDWalletProvider = require('truffle-hdwallet-provider')
+const HDWalletProvider = require('truffle-hdwallet-provider-privkey')
 
 const createWalletProvider = (mnemonic, rpcEndpoint) =>
-  new HDWalletProvider(mnemonic, rpcEndpoint)
+  new HDWalletProvider([mnemonic], rpcEndpoint)
 
 const createInfuraProvider = (network = 'mainnet') =>
   createWalletProvider(
     process.env.MNEMONIC || '',
-    `https://${network}.infura.io/${process.env.INFURA_API_KEY}`
+    `https://${network}.infura.io/v3/${process.env.INFURA_API_KEY}`
   )
 
 module.exports = {

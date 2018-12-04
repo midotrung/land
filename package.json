@@ -21,6 +21,7 @@
   "dependencies": {
     "erc821": "^4.3.0",
     "openzeppelin-zos": "1.9.4",
+    "truffle-hdwallet-provider-privkey": "^0.3.0",
     "zos": "1.4.0",
     "zos-lib": "1.4.0"
   },
@@ -46,7 +47,7 @@
     "solium": "^1.1.8",
     "truffle": "^4.1.13",
     "truffle-flattener": "^1.2.4",
-    "truffle-hdwallet-provider": "0.0.3",
+    "truffle-hdwallet-provider": "0.0.6",
     "web3": "^0.20.4"
   }
 }

@@ -114,7 +114,11 @@ async function waitForTransactions(allPendingTransactions, web3) {
   while (pendingTransactions.length > 0) {
     for (const transaction of pendingTransactions) {
       const hash = transaction.hash
-      const tx = await web3.eth.getTransaction(hash)
+      const tx = await new Promise((resolve, reject) => {
+        web3.eth.getTransaction(hash, (err, data) => {
+          err ? reject(err) : resolve(data)
+        })
+      })
       log.debug(
         `Getting status of tx ${hash}, got:\n`,
         JSON.stringify({ ...tx, raw: '(...)', input: '(...)' }, null, 2)
