@@ -135,7 +135,11 @@ async function waitForTransactions(allPendingTransactions, web3) {
       }
       await sleep(2000)
 
-      const receipt = await web3.eth.getTransactionReceipt(hash)
+      const receipt = await new Promise((resolve, reject) => {
+        web3.eth.getTransactionReceipt(hash, (err, data) => {
+          err ? reject(err) : resolve(data)
+        })
+      })
       log.debug(
         `Getting receipt of tx ${hash}, got:\n`,
         JSON.stringify({ ...receipt, logsBloom: '(...)' }, null, 2)
