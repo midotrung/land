@@ -76,7 +76,7 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms))
 }
 
-async function unlockWeb3Account(web3, account, password) {
+function unlockWeb3Account(web3, account, password) {
   if (web3 === 'undefined') {
     throw new Error('web3 object is not defined')
   }
@@ -91,7 +91,11 @@ async function unlockWeb3Account(web3, account, password) {
 
   if (password) {
     log.debug(`Unlocking account ${account}`)
-    await web3.personal.unlockAccount(account, password)
+    return new Promise((resolve, reject) => {
+      web3.personal.unlockAccount(account, password, (err, data) => {
+        err ? reject(err) : resolve(data)
+      })
+    })
   }
 }
 
