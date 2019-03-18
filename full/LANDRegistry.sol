@@ -248,8 +248,8 @@ interface IERC721Base {
     uint256 indexed assetId
   );
   event ApprovalForAll(
-    address indexed operator,
     address indexed holder,
+    address indexed operator,
     bool authorized
   );
   event Approval(

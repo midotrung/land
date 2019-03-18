@@ -39,7 +39,7 @@ class ScriptRunner {
         setLogLevel(args.logLevel)
         log.info('Using args', JSON.stringify(args, null, 2))
 
-        const configuration = getConfiguration()
+        const configuration = null //getConfiguration()
         const { account, password } = args
 
         args.parcels = args.parcels ? readJSON(expandPath(args.parcels)) : []
