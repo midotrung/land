@@ -8,7 +8,9 @@ const log = {
   warn(...args) {
     console.log('[WARN]', ...args)
   },
-  debug() {},
+  debug(...args) {
+    console.log('[DEBUG]', ...args)
+  },
   error(...args) {
     console.error('[ERROR]', ...args)
   }

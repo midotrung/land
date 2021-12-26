@@ -99,14 +99,18 @@ async function assignParcels(parcels, newOwner, options, contracts) {
 }
 
 async function assignMultipleParcels(parcelsToAssign, newOwner, landRegistry) {
-  const hash = await landRegistry.assignMultipleParcels(
-    parcelsToAssign,
-    newOwner
-  )
-  log.info(
-    `Setting ${newOwner} owner for ${parcelsToAssign.length} parcels: ${hash}`
-  )
-  return { hash, data: parcelsToAssign, status: 'pending' }
+  try {
+    const hash = await landRegistry.assignMultipleParcels(
+      parcelsToAssign,
+      newOwner
+    )
+    log.info(
+      `Setting ${newOwner} owner for ${parcelsToAssign.length} parcels: ${hash}`
+    )
+    return { hash, data: parcelsToAssign, status: 'pending' }
+  } catch (err) {
+    console.error('assignMultipleParcels - Error:', err)
+  }
 }
 
 async function run(args, configuration) {
@@ -118,7 +122,10 @@ async function run(args, configuration) {
   const landRegistry = new LANDRegistry(account, landRegistryAddress, txConfig)
   await landRegistry.setContract(artifacts)
 
-  await unlockWeb3Account(web3, account, password)
+  console.log('landRegistryAddress:', landRegistryAddress)
+  // console.log('landRegistry:', landRegistry)
+
+  // await unlockWeb3Account(web3, account, password)
 
   await assignParcels(
     parcels,

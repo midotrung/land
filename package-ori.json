@@ -3,16 +3,10 @@
   "version": "3.0.0",
   "description": "Contract for Decentraland's LAND",
   "scripts": {
-    "test": "npm run build && scripts/test.sh",
+    "test": "scripts/test.sh",
     "test:watch": "nodemon test/** contracts/** --exec 'npm test'",
     "lint": "npx eslint test && npx solium -d contracts",
-    "lint:fix": "npx eslint --fix test && npx solium -d contracts --fix",
-    "clean": "rimraf ./build",
-    "build": "npm run clean && npx truffle compile --config truffle-config.js",
-    "ganache": "npx ganache-cli -l 10000000 -d 'torch almost feed brother seat earth scorpion panther nuclear interest toy guide'",
-    "assign-parcel": "npx truffle exec ./deploy/assignParcels.js --parcels ./deploy/genesis.json --account 0xA7fc2009cc8B36997Ef533deC396d6B4B00760E4 --password 123 --owner 0xA7fc2009cc8B36997Ef533deC396d6B4B00760E4 --network matictestnet --rpc.allow-unprotected-txs",
-    "deploy-land-estate-matictestnet": "npx truffle exec ./script-deploy/deploy_land_estate.js --network matictestnet",
-    "deploy-land-estate-ganache": "npx truffle exec ./script-deploy/deploy_land_estate.js --network development"
+    "lint:fix": "npx eslint --fix test && npx solium -d contracts --fix"
   },
   "repository": {
     "type": "git",
@@ -25,13 +19,8 @@
   },
   "homepage": "https://github.com/decentraland/land#readme",
   "dependencies": {
-    "@truffle/hdwallet-provider": "1.2.2",
     "erc821": "^5.3.0",
     "openzeppelin-zos": "1.9.4",
-    "truffle": "5.2.6",
-    "web3": "1.2.8",
-    "web3-eth-abi": "^1.3.4",
-    "web3-utils": "^1.3.4",
     "zos": "1.4.0",
     "zos-lib": "1.4.0"
   },
@@ -53,9 +42,11 @@
     "mocha": "^3.5.3",
     "npx": "^9.7.1",
     "prettier": "^1.11.1",
-    "rimraf": "^3.0.2",
     "solidity-sha3": "^0.4.1",
     "solium": "^1.1.8",
-    "truffle-flattener": "^1.2.4"
+    "truffle": "^4.1.13",
+    "truffle-flattener": "^1.2.4",
+    "truffle-hdwallet-provider": "0.0.3",
+    "web3": "^0.20.4"
   }
 }

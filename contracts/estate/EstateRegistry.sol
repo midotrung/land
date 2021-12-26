@@ -669,8 +669,10 @@ contract EstateRegistry is Migratable, IEstateRegistry, ERC721Token, ERC721Recei
    * contraint of the proxy for using an owner
    * Mainnet: 0x8568f23f343694650370fe5e254b55bfb704a6c7
    */
-  function setEstateLandBalanceToken() external {
+  function setEstateLandBalanceToken(address _newEstateLandBalance) external {
+    require(_newEstateLandBalance != address(0), "invalid _newEstateLandBalance");
     require(estateLandBalance == address(0), "estateLandBalance was set");
-    _setEstateLandBalanceToken(address(0x8568f23f343694650370fe5e254b55bfb704a6c7));
+    // _setEstateLandBalanceToken(address(0x8568f23f343694650370fe5e254b55bfb704a6c7));
+    _setEstateLandBalanceToken(_newEstateLandBalance);
   }
 }

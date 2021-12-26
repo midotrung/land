@@ -1,53 +1,69 @@
 require('babel-register')
 require('babel-polyfill')
 
-const HDWalletProvider = require('truffle-hdwallet-provider')
+// const HDWalletProvider = require('truffle-hdwallet-provider')
+const HDWalletProvider = require('@truffle/hdwallet-provider')
 
-const createWalletProvider = (mnemonic, rpcEndpoint) =>
-  new HDWalletProvider(mnemonic, rpcEndpoint)
-
-const createInfuraProvider = (network = 'mainnet') =>
-  createWalletProvider(
-    process.env.MNEMONIC || '',
-    `https://${network}.infura.io/${process.env.INFURA_API_KEY}`
-  )
+const fs = require('fs')
+const path = require('path')
 
 module.exports = {
-  solc: {
-    optimizer: {
-      enabled: true,
-      runs: 200
+  contracts_directory: 'contracts',
+  compilers: {
+    solc: {
+      version: '^0.4.18',
+      parser: 'solcjs',
+      settings: {
+        optimizer: {
+          enabled: true,
+          runs: 200
+        }
+      }
     }
   },
   networks: {
-    livenet: {
-      host: 'localhost',
-      port: 8545,
-      gas: 70000000,
-      network_id: '*'
-    },
     development: {
       host: 'localhost',
-      port: 18545,
-      gas: 100000000,
+      port: 8545,
+      gas: 4000000,
       network_id: '*'
     },
-    ropsten: {
-      host: 'localhost',
-      from: '0x62ba62ff92917edf8ac0386fa10e3b27950bce8d',
-      port: 8545,
-      network_id: 3,
-      gas: 30000000
+    matictestnet: {
+      provider: () => {
+        const privatekey = fs
+          .readFileSync(`${path.dirname(__filename)}/.secret.matictestnet`)
+          .toString()
+        return new HDWalletProvider(
+          privatekey,
+          // 'https://rpc-mumbai.maticvigil.com/'
+          'wss://ws-matic-mumbai.chainstacklabs.com'
+        )
+      },
+      network_id: 80001,
+      chainId: 80001,
+      // confirmations: 2,
+      // timeoutBlocks: 50000,
+      // networkCheckTimeout: 1000000,
+      // skipDryRun: true,
+      gas: 4000000,
+      gasPrice: 5000000000 // 5 Gwei
     },
-    infura_mainnet: {
-      provider: () => createInfuraProvider('mainnet'),
-      network_id: 1,
-      gas: 30000000
-    },
-    infura_ropsten: {
-      provider: () => createInfuraProvider('ropsten'),
-      network_id: 3,
-      gas: 30000000
+    maticmainnet: {
+      provider: () => {
+        const privatekey = fs
+          .readFileSync(`${path.dirname(__filename)}/.secret.maticmainnet`)
+          .toString()
+        return new HDWalletProvider(
+          privatekey,
+          'https://rpc-mainnet.maticvigil.com/'
+        )
+      },
+      network_id: 137,
+      confirmations: 2,
+      timeoutBlocks: 200,
+      skipDryRun: true,
+      gas: 4000000,
+      gasPrice: 50000000000 // 50 Gwei
     }
   }
 }
