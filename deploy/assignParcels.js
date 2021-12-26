@@ -100,12 +100,11 @@ async function assignParcels(parcels, newOwner, options, contracts) {
 
 async function assignMultipleParcels(parcelsToAssign, newOwner, landRegistry) {
   try {
-    const hash = await landRegistry.assignMultipleParcels(
-      parcelsToAssign,
-      newOwner
-    )
+    const hash = await landRegistry
+      .assignMultipleParcels(parcelsToAssign, newOwner)
+      .then(res => res.receipt.transactionHash)
     log.info(
-      `Setting ${newOwner} owner for ${parcelsToAssign.length} parcels: ${hash}`
+      `Setting ${newOwner} owner for ${parcelsToAssign.length} parcels - tx: ${hash}`
     )
     return { hash, data: parcelsToAssign, status: 'pending' }
   } catch (err) {

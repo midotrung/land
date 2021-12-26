@@ -36,16 +36,17 @@ module.exports = {
         return new HDWalletProvider(
           privatekey,
           // 'https://rpc-mumbai.maticvigil.com/'
-          'wss://ws-matic-mumbai.chainstacklabs.com'
+          // 'wss://ws-matic-mumbai.chainstacklabs.com'
+          'wss://matic-testnet-archive-ws.bwarelabs.com'
         )
       },
       network_id: 80001,
-      chainId: 80001,
-      // confirmations: 2,
-      // timeoutBlocks: 50000,
-      // networkCheckTimeout: 1000000,
-      // skipDryRun: true,
-      gas: 4000000,
+      // chainId: 80001,
+      confirmations: 2,
+      timeoutBlocks: 50000,
+      networkCheckTimeout: 1000000,
+      skipDryRun: true,
+      gas: 7000000,
       gasPrice: 5000000000 // 5 Gwei
     },
     maticmainnet: {

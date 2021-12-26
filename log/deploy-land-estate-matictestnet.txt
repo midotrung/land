@@ -1,0 +1,18 @@
+decentraland/land$ npm run deploy-land-estate-matictestnet
+
+> land@3.0.0 deploy-land-estate-matictestnet
+> npx truffle exec ./script-deploy/deploy_land_estate.js --network matictestnet
+
+Using network 'matictestnet'.
+
+networkName: matictestnet
+creator: 0x342a9269596f0351b5067a32452d6bFBdb435265
+Deployed LANDProxy: 0xF5563178eB8aFf61f0A9730dCcAE80D4eC51233e
+Deployed LANDRegistry: 0x5d1622481cC69F08b624e4EB29201025CB069D2A
+proxy.upgrade tx: 0xe7479a86e32fb783c005b775b2c398879dd39c3a090c47da088317c785b19fa2
+Deployed EstateRegistry: 0x578f526675cd606bC9F53d3b0713e7D125eE1674
+estate.initialize tx: 0x207ea3386540141b4bdcb11d3569f04bccd8636143ea7b9ab03f513eab48ca1c
+land.authorizeDeploy tx: 0x6fdb856d9af0ab3bc7b68726e49b4eb13bc605cabdb471907d524f742b0c204a
+land.assignNewParcel tx: 0xd5f574907d6083042b412b4c45878712b6fcd93c1ae847fcab2a014b4c31e437
+land.assignNewParcel tx: 0x34d874102076fb3525a5f74381ae8bc2a3e1d0379743d40a775a001e4035ae7a
+land.ping tx: 0xc4bfb6fa023cea56c041f8171124b3b87464f132eed296d867d967b00083800d

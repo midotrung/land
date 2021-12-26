@@ -18,12 +18,7 @@ const LAND_SYMBOL = 'LAND'
 
 const EMPTY_ADDRESS = '0x0000000000000000000000000000000000000000'
 
-async function setupContracts(creator) {
-  const creationParams = {
-    gas: 7e6,
-    gasPrice: 1e9,
-    from: creator
-  }
+async function setupContracts(creator, creationParams) {
   const sentByCreator = { ...creationParams, from: creator }
 
   // const LANDRegistry = artifacts.require('LANDRegistryTest')
@@ -111,7 +106,7 @@ module.exports = async function(callback) {
 
     const creationParams = {
       gas: 7e6,
-      gasPrice: 1e9,
+      gasPrice: 20000000000, // 20 Gwei (Matic testnet)
       from: creator
     }
 
@@ -120,7 +115,7 @@ module.exports = async function(callback) {
     const sentByOperator = { ...creationParams, from: operator }
     const sentByAnotherUser = { ...creationParams, from: anotherUser }
 
-    const contracts = await setupContracts(creator)
+    const contracts = await setupContracts(creator, creationParams)
     const estate = contracts.estate
     const land = contracts.land
 

@@ -1,0 +1,188 @@
+decentraland/land$ npm run assign-parcel-matictestnet
+
+> land@3.0.0 assign-parcel-matictestnet
+> npx truffle exec ./deploy/assignParcels.js --parcels ./deploy/genesis.json --account 0x342a9269596f0351b5067a32452d6bFBdb435265 --password 123 --owner 0xA7fc2009cc8B36997Ef533deC396d6B4B00760E4 --network matictestnet
+
+> Warning: possible unsupported (undocumented in help) command line option: --parcels,--account,--password,--owner
+Using network 'matictestnet'.
+
+[INFO] Using args {
+  "parcels": "./deploy/genesis.json",
+  "account": "0x342a9269596f0351b5067a32452d6bFBdb435265",
+  "password": "123",
+  "owner": "0xA7fc2009cc8B36997Ef533deC396d6B4B00760E4",
+  "network": "matictestnet"
+}
+[DEBUG] Gettting configuration file "/home/trung/Work/reference/morphe/task/virtual-land/code/decentraland/land/deploy/configuration.json"
+[DEBUG] Reading JSON file "/home/trung/Work/reference/morphe/task/virtual-land/code/decentraland/land/deploy/configuration.json"
+[DEBUG] Reading JSON file "./deploy/genesis.json"
+landRegistryAddress: 0xF5563178eB8aFf61f0A9730dCcAE80D4eC51233e
+[DEBUG] Setting the owner of 17 parcels as 0xA7fc2009cc8B36997Ef533deC396d6B4B00760E4
+[DEBUG] Getting on chain owner for parcel 0,0
+[WARN] 0,0 already has 0x342a9269596f0351b5067a32452d6bFBdb435265 as owner!
+[DEBUG] Getting on chain owner for parcel 0,1
+[WARN] 0,1 already has 0x342a9269596f0351b5067a32452d6bFBdb435265 as owner!
+[DEBUG] Getting on chain owner for parcel 0,2
+[WARN] 0,2 already has 0x342a9269596f0351b5067a32452d6bFBdb435265 as owner!
+[DEBUG] Getting on chain owner for parcel 0,3
+[WARN] 0,3 already has 0x342a9269596f0351b5067a32452d6bFBdb435265 as owner!
+[DEBUG] Getting on chain owner for parcel 1,1
+[WARN] 1,1 already has 0x342a9269596f0351b5067a32452d6bFBdb435265 as owner!
+[DEBUG] Getting on chain owner for parcel 1,2
+[WARN] 1,2 already has 0x342a9269596f0351b5067a32452d6bFBdb435265 as owner!
+[DEBUG] Getting on chain owner for parcel 1,3
+[WARN] 1,3 already has 0x342a9269596f0351b5067a32452d6bFBdb435265 as owner!
+[DEBUG] Getting on chain owner for parcel 2,1
+[WARN] 2,1 already has 0x342a9269596f0351b5067a32452d6bFBdb435265 as owner!
+[DEBUG] Getting on chain owner for parcel 2,2
+[WARN] 2,2 already has 0x342a9269596f0351b5067a32452d6bFBdb435265 as owner!
+[DEBUG] Getting on chain owner for parcel 2,3
+[WARN] 2,3 already has 0x342a9269596f0351b5067a32452d6bFBdb435265 as owner!
+[DEBUG] Getting on chain owner for parcel 3,1
+[WARN] 3,1 already has 0x342a9269596f0351b5067a32452d6bFBdb435265 as owner!
+[DEBUG] Getting on chain owner for parcel 3,2
+[WARN] 3,2 already has 0x342a9269596f0351b5067a32452d6bFBdb435265 as owner!
+[DEBUG] Getting on chain owner for parcel 3,3
+[WARN] 3,3 already has 0x342a9269596f0351b5067a32452d6bFBdb435265 as owner!
+[DEBUG] Getting on chain owner for parcel 4,0
+[DEBUG] Empty owner for 4,0, will be assigned
+[DEBUG] Getting on chain owner for parcel 4,1
+[DEBUG] Empty owner for 4,1, will be assigned
+[DEBUG] Getting on chain owner for parcel 4,2
+[DEBUG] Empty owner for 4,2, will be assigned
+[DEBUG] Getting on chain owner for parcel 4,3
+[DEBUG] Empty owner for 4,3, will be assigned
+[DEBUG] Sending assignMultipleParcels
+ {
+  xs: [ 4, 4, 4, 4 ],
+  ys: [ 0, 1, 2, 3 ],
+  newOwner: '0xA7fc2009cc8B36997Ef533deC396d6B4B00760E4'
+}
+[INFO] Setting 0xA7fc2009cc8B36997Ef533deC396d6B4B00760E4 owner for 4 parcels - tx: 0x473c8c243f06d58e635f971fc7f9656074ffa8de7bcadb97019f37767366af97
+[INFO] Waiting for 1 transactions
+[DEBUG] Getting status of tx 0x473c8c243f06d58e635f971fc7f9656074ffa8de7bcadb97019f37767366af97, got:
+ {
+  "blockHash": "0xdb709fd8f86a1c205d794756915a1f42f93f755600c9b5b69c9a1f8d7fde9a32",
+  "blockNumber": 23156063,
+  "from": "0x342a9269596f0351b5067a32452d6bFBdb435265",
+  "gas": "0xf4240",
+  "gasPrice": "5000000000",
+  "hash": "0x473c8c243f06d58e635f971fc7f9656074ffa8de7bcadb97019f37767366af97",
+  "input": "(...)",
+  "nonce": 2674,
+  "to": "0xF5563178eB8aFf61f0A9730dCcAE80D4eC51233e",
+  "transactionIndex": 1,
+  "value": "0",
+  "type": "0x0",
+  "v": "0x27125",
+  "r": "0xb3e6036cf76caadffe250b04cb98cff2e909f85954e1b13944070e3476c0844d",
+  "s": "0x54bd035a82d191027636cb90f0a08918fc8c2001f5cc1cbc2dfe59c3b6419a6",
+  "raw": "(...)"
+}
+[INFO] Sleeping for 2 seconds
+[DEBUG] Getting receipt of tx 0x473c8c243f06d58e635f971fc7f9656074ffa8de7bcadb97019f37767366af97, got:
+ {
+  "blockHash": "0xdb709fd8f86a1c205d794756915a1f42f93f755600c9b5b69c9a1f8d7fde9a32",
+  "blockNumber": 23156063,
+  "contractAddress": null,
+  "cumulativeGasUsed": 631689,
+  "effectiveGasPrice": "0x12a05f200",
+  "from": "0x342a9269596f0351b5067a32452d6bfbdb435265",
+  "gasUsed": "0x4fc62",
+  "logs": [
+    {
+      "address": "0xF5563178eB8aFf61f0A9730dCcAE80D4eC51233e",
+      "topics": [
+        "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+        "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "0x000000000000000000000000a7fc2009cc8b36997ef533dec396d6b4b00760e4",
+        "0x0000000000000000000000000000000400000000000000000000000000000000"
+      ],
+      "data": "0x",
+      "blockNumber": 23156063,
+      "transactionHash": "0x473c8c243f06d58e635f971fc7f9656074ffa8de7bcadb97019f37767366af97",
+      "transactionIndex": 1,
+      "blockHash": "0xdb709fd8f86a1c205d794756915a1f42f93f755600c9b5b69c9a1f8d7fde9a32",
+      "logIndex": 1,
+      "removed": false,
+      "id": "log_630de81e"
+    },
+    {
+      "address": "0xF5563178eB8aFf61f0A9730dCcAE80D4eC51233e",
+      "topics": [
+        "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+        "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "0x000000000000000000000000a7fc2009cc8b36997ef533dec396d6b4b00760e4",
+        "0x0000000000000000000000000000000400000000000000000000000000000001"
+      ],
+      "data": "0x",
+      "blockNumber": 23156063,
+      "transactionHash": "0x473c8c243f06d58e635f971fc7f9656074ffa8de7bcadb97019f37767366af97",
+      "transactionIndex": 1,
+      "blockHash": "0xdb709fd8f86a1c205d794756915a1f42f93f755600c9b5b69c9a1f8d7fde9a32",
+      "logIndex": 2,
+      "removed": false,
+      "id": "log_f5947a8b"
+    },
+    {
+      "address": "0xF5563178eB8aFf61f0A9730dCcAE80D4eC51233e",
+      "topics": [
+        "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+        "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "0x000000000000000000000000a7fc2009cc8b36997ef533dec396d6b4b00760e4",
+        "0x0000000000000000000000000000000400000000000000000000000000000002"
+      ],
+      "data": "0x",
+      "blockNumber": 23156063,
+      "transactionHash": "0x473c8c243f06d58e635f971fc7f9656074ffa8de7bcadb97019f37767366af97",
+      "transactionIndex": 1,
+      "blockHash": "0xdb709fd8f86a1c205d794756915a1f42f93f755600c9b5b69c9a1f8d7fde9a32",
+      "logIndex": 3,
+      "removed": false,
+      "id": "log_d3232f19"
+    },
+    {
+      "address": "0xF5563178eB8aFf61f0A9730dCcAE80D4eC51233e",
+      "topics": [
+        "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+        "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "0x000000000000000000000000a7fc2009cc8b36997ef533dec396d6b4b00760e4",
+        "0x0000000000000000000000000000000400000000000000000000000000000003"
+      ],
+      "data": "0x",
+      "blockNumber": 23156063,
+      "transactionHash": "0x473c8c243f06d58e635f971fc7f9656074ffa8de7bcadb97019f37767366af97",
+      "transactionIndex": 1,
+      "blockHash": "0xdb709fd8f86a1c205d794756915a1f42f93f755600c9b5b69c9a1f8d7fde9a32",
+      "logIndex": 4,
+      "removed": false,
+      "id": "log_bede9b94"
+    },
+    {
+      "address": "0x0000000000000000000000000000000000001010",
+      "topics": [
+        "0x4dfe1bbbcf077ddc3e01291eea2d5c70c2b422b415d95645b9adcfd678cb1d63",
+        "0x0000000000000000000000000000000000000000000000000000000000001010",
+        "0x000000000000000000000000342a9269596f0351b5067a32452d6bfbdb435265",
+        "0x000000000000000000000000c26880a0af2ea0c7e8130e6ec47af756465452e8"
+      ],
+      "data": "0x0000000000000000000000000000000000000000000000000005cde7b85bbd5200000000000000000000000000000000000000000000000018e561dab7620fbd0000000000000000000000000000000000000000000003dacd457cd438c4e8a300000000000000000000000000000000000000000000000018df93f2ff06526b0000000000000000000000000000000000000000000003dacd4b4abbf120a5f5",
+      "blockNumber": 23156063,
+      "transactionHash": "0x473c8c243f06d58e635f971fc7f9656074ffa8de7bcadb97019f37767366af97",
+      "transactionIndex": 1,
+      "blockHash": "0xdb709fd8f86a1c205d794756915a1f42f93f755600c9b5b69c9a1f8d7fde9a32",
+      "logIndex": 5,
+      "removed": false,
+      "id": "log_91ae89e7"
+    }
+  ],
+  "logsBloom": "(...)",
+  "status": true,
+  "to": "0xf5563178eb8aff61f0a9730dccae80d4ec51233e",
+  "transactionHash": "0x473c8c243f06d58e635f971fc7f9656074ffa8de7bcadb97019f37767366af97",
+  "transactionIndex": 1,
+  "type": "0x0"
+}
+[INFO] Tx 0x473c8c243f06d58e635f971fc7f9656074ffa8de7bcadb97019f37767366af97 confirmed!
+[INFO] Sleeping for 6 seconds
+[INFO] Nothing else to do
