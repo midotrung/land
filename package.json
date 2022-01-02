@@ -11,6 +11,7 @@
     "build": "npm run clean && npx truffle compile --config truffle-config.js",
     "ganache": "npx ganache-cli -l 10000000 -d 'torch almost feed brother seat earth scorpion panther nuclear interest toy guide'",
     "assign-parcel-matictestnet": "npx truffle exec ./deploy/assignParcels.js --parcels ./deploy/genesis.json --account 0x342a9269596f0351b5067a32452d6bFBdb435265 --password 123 --owner 0xA7fc2009cc8B36997Ef533deC396d6B4B00760E4 --network matictestnet",
+    "create-estate-matictestnet": "npx truffle exec ./deploy/createEstate.js --parcels ./deploy/genesis.json --account 0x342a9269596f0351b5067a32452d6bFBdb435265 --password 123 --owner 0xA7fc2009cc8B36997Ef533deC396d6B4B00760E4 --network matictestnet",
     "deploy-land-estate-matictestnet": "npx truffle exec ./script-deploy/deploy_land_estate.js --network matictestnet",
     "deploy-land-estate-ganache": "npx truffle exec ./script-deploy/deploy_land_estate.js --network development"
   },

@@ -5,16 +5,17 @@ const MiniMeToken = artifacts.require('MiniMeToken')
 
 const execVerifyCmd = require('./publish_code')
 
-const networkIdName = {
-  137: 'maticmainnet',
-  80001: 'matictestnet'
-}
-
+//// Input params /////
 const ESTATE_NAME = 'Estate'
 const ESTATE_SYMBOL = 'EST'
 
 const LAND_NAME = 'Decentraland LAND'
 const LAND_SYMBOL = 'LAND'
+
+const networkIdName = {
+  137: 'maticmainnet',
+  80001: 'matictestnet'
+}
 
 const EMPTY_ADDRESS = '0x0000000000000000000000000000000000000000'
 

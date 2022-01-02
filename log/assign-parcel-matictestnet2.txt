@@ -1,0 +1,47 @@
+decentraland/land$ npm run assign-parcel-matictestnet
+
+> land@3.0.0 assign-parcel-matictestnet
+> npx truffle exec ./deploy/assignParcels.js --parcels ./deploy/genesis.json --account 0x342a9269596f0351b5067a32452d6bFBdb435265 --password 123 --owner 0xA7fc2009cc8B36997Ef533deC396d6B4B00760E4 --network matictestnet
+
+> Warning: possible unsupported (undocumented in help) command line option: --parcels,--account,--password,--owner
+Using network 'matictestnet'.
+
+[INFO] Using args {
+  "parcels": "./deploy/genesis.json",
+  "account": "0x342a9269596f0351b5067a32452d6bFBdb435265",
+  "password": "123",
+  "owner": "0xA7fc2009cc8B36997Ef533deC396d6B4B00760E4",
+  "network": "matictestnet"
+}
+[DEBUG] Gettting configuration file "/home/trung/Work/reference/morphe/task/virtual-land/code/decentraland/land/deploy/configuration.json"
+[DEBUG] Reading JSON file "/home/trung/Work/reference/morphe/task/virtual-land/code/decentraland/land/deploy/configuration.json"
+[DEBUG] Reading JSON file "./deploy/genesis.json"
+landRegistryAddress: 0xF5563178eB8aFf61f0A9730dCcAE80D4eC51233e
+[DEBUG] Setting the owner of 13 parcels as 0xA7fc2009cc8B36997Ef533deC396d6B4B00760E4
+[DEBUG] Getting on chain owner for parcel 0,0
+[WARN] 0,0 already has 0x578f526675cd606bC9F53d3b0713e7D125eE1674 as owner!
+[DEBUG] Getting on chain owner for parcel 0,1
+[WARN] 0,1 already has 0x578f526675cd606bC9F53d3b0713e7D125eE1674 as owner!
+[DEBUG] Getting on chain owner for parcel 0,2
+[WARN] 0,2 already has 0x578f526675cd606bC9F53d3b0713e7D125eE1674 as owner!
+[DEBUG] Getting on chain owner for parcel 0,3
+[WARN] 0,3 already has 0x578f526675cd606bC9F53d3b0713e7D125eE1674 as owner!
+[DEBUG] Getting on chain owner for parcel 1,1
+[WARN] 1,1 already has 0x578f526675cd606bC9F53d3b0713e7D125eE1674 as owner!
+[DEBUG] Getting on chain owner for parcel 1,2
+[WARN] 1,2 already has 0x578f526675cd606bC9F53d3b0713e7D125eE1674 as owner!
+[DEBUG] Getting on chain owner for parcel 1,3
+[WARN] 1,3 already has 0x578f526675cd606bC9F53d3b0713e7D125eE1674 as owner!
+[DEBUG] Getting on chain owner for parcel 2,1
+[WARN] 2,1 already has 0x578f526675cd606bC9F53d3b0713e7D125eE1674 as owner!
+[DEBUG] Getting on chain owner for parcel 2,2
+[WARN] 2,2 already has 0x578f526675cd606bC9F53d3b0713e7D125eE1674 as owner!
+[DEBUG] Getting on chain owner for parcel 2,3
+[WARN] 2,3 already has 0x578f526675cd606bC9F53d3b0713e7D125eE1674 as owner!
+[DEBUG] Getting on chain owner for parcel 3,1
+[WARN] 3,1 already has 0x342a9269596f0351b5067a32452d6bFBdb435265 as owner!
+[DEBUG] Getting on chain owner for parcel 3,2
+[WARN] 3,2 already has 0x342a9269596f0351b5067a32452d6bFBdb435265 as owner!
+[DEBUG] Getting on chain owner for parcel 3,3
+[WARN] 3,3 already has 0x342a9269596f0351b5067a32452d6bFBdb435265 as owner!
+[INFO] Nothing else to do

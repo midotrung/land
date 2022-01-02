@@ -68,7 +68,7 @@ async function run(args, configuration) {
   estateRegistry = new EstateRegistry(account, estateRegistryAddress, txConfig)
   await estateRegistry.setContract(artifacts)
 
-  await unlockWeb3Account(web3, account, password)
+  // await unlockWeb3Account(web3, account, password)
 
   await createEstate(
     parcels,
