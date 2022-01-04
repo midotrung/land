@@ -138,7 +138,7 @@ contract LANDRegistry is Storage, Ownable, FullAssetRegistry, ILANDRegistry {
 
   function _encodeTokenId(int x, int y) internal pure returns (uint result) {
     require(
-      -1000000 < x && x < 1000000 && -1000000 < y && y < 1000000,
+      -1000000000000 < x && x < 1000000000000 && -1000000000000 < y && y < 1000000000000,
       "The coordinates should be inside bounds"
     );
     return _unsafeEncodeTokenId(x, y);
@@ -160,7 +160,7 @@ contract LANDRegistry is Storage, Ownable, FullAssetRegistry, ILANDRegistry {
   function _decodeTokenId(uint value) internal pure returns (int x, int y) {
     (x, y) = _unsafeDecodeTokenId(value);
     require(
-      -1000000 < x && x < 1000000 && -1000000 < y && y < 1000000,
+      -1000000000000 < x && x < 1000000000000 && -1000000000000 < y && y < 1000000000000,
       "The coordinates should be inside bounds"
     );
   }
